@@ -14,6 +14,7 @@ const {
 class App extends Component {
   constructor(props) {
     super(props);
+    this.prefix = "https://blockchainkmc.herokuapp.com"
     if (process.env.REACT_APP_BACKEND_URL) {
       axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
       }
@@ -27,7 +28,7 @@ class App extends Component {
 
   showNumOfCoins = async (event) => {
 
-    let res = await axios.get("/getNumOfCoins", {
+    let res = await axios.get(prefix+"/getNumOfCoins", {
       params: {
         address: this.state.account,
       },
