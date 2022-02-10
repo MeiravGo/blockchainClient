@@ -28,7 +28,7 @@ class App extends Component {
 
   showNumOfCoins = async (event) => {
 
-    let res = await axios.get(prefix+"/getNumOfCoins", {
+    let res = await axios.get(this.prefix+"/getNumOfCoins", {
       params: {
         address: this.state.account,
       },
