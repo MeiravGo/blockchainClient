@@ -14,7 +14,7 @@ const {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.prefix = "http://blockchainkmc.herokuapp.com"
+    this.prefix = "blockchainkmc.herokuapp.com"
     if (process.env.REACT_APP_BACKEND_URL) {
       axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
       }
