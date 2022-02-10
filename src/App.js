@@ -14,7 +14,9 @@ const {
 class App extends Component {
   constructor(props) {
     super(props);
-
+    if (process.env.REACT_APP_BACKEND_URL) {
+      Axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
+      }
     this.state = {
       createQuiz: undefined,
       enterQuiz: undefined,
